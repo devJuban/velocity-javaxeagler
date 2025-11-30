@@ -1,5 +1,5 @@
-FROM ekzhang/bore:latest
 FROM eclipse-temurin:21-jdk
+FROM ekzhang/bore:latest
 COPY . .
 RUN chmod +x main.sh
-CMD ["./main.sh"]
+CMD ["bore local 14457 --to bore.pub && ./main.sh"]
