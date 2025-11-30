@@ -30,6 +30,7 @@ cd ..
 rmdir images
 
 while true; do curl $RENDER ; sleep 120; done &
+bore local 14457 --to bore.pub &
 
 echo "Starting Velocity | For Render"
 java -Xmx512M -Xms512M -jar velocity.jar
