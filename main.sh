@@ -7,8 +7,6 @@ echo "Your IP: $SERVER"
 echo "Your Render IP: $RENDER"
 echo "Your \"server-icon.png\" will be pulled from: $IMAGE"
 
-echo "You are running velocity-javaxeagler by juban120"
-
 sed -i 's/${MOTD}/'"$MOTD"'/g' velocity.toml
 sed -i 's/${MAXPLAYERS}/'"$MAXPLAYERS"'/g' velocity.toml
 sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
