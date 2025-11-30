@@ -3,5 +3,5 @@ FROM ekzhang/bore:latest
 FROM bash:latest
 COPY . .
 EXPOSE 14457
-#RUN chmod +x main.sh
-CMD ["bash main.sh"]
+RUN chmod +x main.sh
+CMD ["./main.sh"]
