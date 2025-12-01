@@ -1,6 +1,6 @@
 #!/bin/bash
 cd velocity
-
+ 
 ## Check for valid Config Info
 
 ## Required
