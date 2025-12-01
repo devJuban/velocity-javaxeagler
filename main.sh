@@ -1,6 +1,8 @@
 #!/bin/bash
 cd velocity
 
+## Display Config Info
+
 echo "Your MOTD (eagler only): $MOTD"
 echo "Your Max Players (eagler only): $MAXPLAYERS"
 echo "Your IP: $SERVER"
@@ -17,6 +19,8 @@ sed -i 's/${MOTD}/'"$MOTD"'/g' listeners.toml
 
 cd ../..
 
+## Set up server-icon.png
+
 mkdir images && cd images
 wget $IMAGE
 
@@ -29,8 +33,16 @@ cd ..
 
 rmdir images
 
-while true; do curl $RENDER ; sleep 120; done &
+## Set up 24/7 web service
+
+while true; do sleep 120; curl $RENDER ; done &
+
+## Install bore 
+
+cargo install bore-cli
 bore local 14457 --to bore.pub &
+
+## Start Velocity
 
 echo "Starting Velocity | For Render"
 java -Xmx512M -Xms512M -jar velocity.jar
