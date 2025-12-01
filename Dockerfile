@@ -1,6 +1,4 @@
 FROM rust:latest
-COPY . .
-EXPOSE 14457
 RUN cargo install bore-cli
 
 FROM eclipse-temurin:21-jdk
