@@ -67,7 +67,6 @@ while true; do sleep 120; curl $RENDER ; done &
 
 # Install bore 
 
-cargo install bore-cli
 bore local 14457 --to bore.pub &
 
 # Start Velocity
