@@ -1,5 +1,35 @@
 #!/bin/bash
 cd velocity
+ 
+# Check for valid Config Info
+
+# Required
+
+if [$MAXPLAYERS == ""]; then
+    echo "Please configure your MAXPLAYERS environment variable."
+    exit 1
+fi
+
+if [$SERVER == ""]; then
+    echo "Please configure your SERVER environment variable."
+    exit 1
+fi
+
+## Optional
+
+if [$MOTD == ""]; then
+    echo "No MOTD environment variable configured, leaving blank."
+fi
+
+if [$RENDER == ""]; then
+    echo "No RENDER environment variable configured, this web service will NOT be 24/7."
+fi
+
+if [$IMAGE == ""]; then
+    echo "No IMAGE environment variable configured, leaving blank."
+fi
+
+# Display Config Info
 
 echo "Your MOTD (eagler only): $MOTD"
 echo "Your Max Players (eagler only): $MAXPLAYERS"
@@ -17,6 +47,8 @@ sed -i 's/${MOTD}/'"$MOTD"'/g' listeners.toml
 
 cd ../..
 
+# Set up server-icon.png
+
 mkdir images && cd images
 wget $IMAGE
 
@@ -29,7 +61,16 @@ cd ..
 
 rmdir images
 
-while true; do curl $RENDER ; sleep 120; done &
+# Set up 24/7 web service
+
+while true; do sleep 120; curl $RENDER ; done &
+
+# Install bore 
+
+cargo install bore-cli
+bore local 14457 --to bore.pub &
+
+# Start Velocity
 
 echo "Starting Velocity | For Render"
 java -Xmx512M -Xms512M -jar velocity.jar
