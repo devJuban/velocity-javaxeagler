@@ -1,9 +1,3 @@
-<html>
-
-<head></head>
-
-<body>
-
 <h1>Notes</h1>
 
 <h2>Usecases:</h2>
@@ -72,12 +66,9 @@
 <p>Step 7: Go to Environment and set "RENDER" to the onrender.com ip <b>(MAKE SURE TO COPY https://)</b></p>
 <img src="./imgs/render/step7.png">
 
-<h2>For Koyeb:</h2>
+## For Koyeb:
 
-<p style="color: red;"><b>WARNING: I AM NO LONGER SUPPORTING KOYEB! PLEASE CONSIDER USING RENDER!</b></p>
+> [!CAUTION]
+> I AM NO LONGER SUPPORTING KOYEB! PLEASE CONSIDER SWITCHING TO RENDER!
 
-<p>Coming Soon! (in the meanwhile use <a href="README_old.md">README_old.md</a>)</p>
-
-</body>
-
-</html>
+Coming Soon! (in the meanwhile use <a href="README_old.md">README_old.md</a>)
