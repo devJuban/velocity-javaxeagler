@@ -1,6 +1,8 @@
 #!/bin/bash
 cd velocity
- 
+
+bore local 14457 --to bore.pub
+
 # Check for valid Config Info
 
 # Required

@@ -6,5 +6,4 @@ RUN cargo install bore-cli
 #COPY . .
 RUN chmod +x main.sh
 
-RUN ./main.sh
-CMD ["bore", "local", "14457", "--to", "bore.pub"]
+CMD ["./main.sh"]
