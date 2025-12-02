@@ -43,7 +43,8 @@
 <h4 style="font-size: 17px"><u>Cons:</u></h4>
 <p>May run into a out of memory error(not stable)</p>
 
-<p style="color: red;"><b>WARNING: EVERYTIME YOU RESTART/REDEPLOY THE SERVICE ALL YOUR DATA WILL BE WIPED! (velocity-javaxeagler only!)</b></p>
+> [!CAUTION]
+> WARNING: EVERYTIME YOU RESTART/REDEPLOY THE SERVICE ALL YOUR DATA WILL BE WIPED! (velocity-javaxeagler only!)
 
 <h1>Deploy</h1>
 
