@@ -71,4 +71,4 @@ echo "Starting Velocity | For Render"
 java -Xmx512M -Xms512M -jar velocity.jar &
 
 # Run "bore"
-bore local 14457 --to bore.pub 
+#bore local 14457 --to bore.pub 
