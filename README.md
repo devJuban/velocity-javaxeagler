@@ -65,7 +65,7 @@ Step 5.5: For the image upload you server-icon to a website(eg. <a href="https:/
 
 **Step 6: After deploying your Web Service, copy the onrender.com ip (eg. myserver.onrender.com)**
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > (IMPORTANT, IF YOU WANT A 24/7 PROXY)
 
 <img src="./imgs/render/step6.png">
