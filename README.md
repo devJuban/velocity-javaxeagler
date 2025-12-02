@@ -46,25 +46,30 @@
 > [!CAUTION]
 > WARNING: EVERYTIME YOU RESTART/REDEPLOY THE SERVICE ALL YOUR DATA WILL BE WIPED! (velocity-javaxeagler only!)
 
-<h1>Deploy</h1>
+# Deploy
 
-<h2>For Render:</h2>
+## For Render:
 
-<p>Step 1: Click "Deploy a Web Service"</p>
+Step 1: Click "Deploy a Web Service"
 <img src="./imgs/render/step1.png">
-<p>Step 2: Click "Public Git Repository" and connect "https://github.com/devJuban/velocity-eagler/"</p>
+Step 2: Click "Public Git Repository" and connect "https://github.com/devJuban/velocity-eagler/"
 <img src="./imgs/render/step2.png">
-<p> Step 3: Set the branch to "render" and make sure Language is set to Docker</p>
-<p> Step 3.5: Change the region to the region thats closest to you(lower ping)</p>
+Step 3: Set the branch to "render" and make sure Language is set to Docker
+Step 3.5: Change the region to the region thats closest to you(lower ping)
 <img src="./imgs/render/step3.png">
-<p> Step 4: Click for a free Instance Type.</p>
+Step 4: Click for a free Instance Type.
 <img src="./imgs/render/step4.png">
-<p> Step 5: Create 4 Environment Variables (check images for names).</p>
-<p> Step 5.5: For the image upload you server-icon to a website(eg. <a href="https://imgbb.com/">imgbb</a>) and copy the url the ends with .png <b>(MAKE SURE ITS A PNG FILE ONLY!)</b></p>
+Step 5: Create 4 Environment Variables (check images for names).
+Step 5.5: For the image upload you server-icon to a website(eg. <a href="https://imgbb.com/">imgbb</a>) and copy the url the ends with .png **(MAKE SURE ITS A PNG FILE ONLY!)**
 <img src="./imgs/render/step5.png">
-<p><b>(IMPORTANT, IF YOU WANT A 24/7 PROXY) </b>Step 6: After deploying your Web Service, copy the onrender.com ip (eg. myserver.onrender.com)</p>
+
+**Step 6: After deploying your Web Service, copy the onrender.com ip (eg. myserver.onrender.com)**
+
+> [IMPORTANT]
+> (IMPORTANT, IF YOU WANT A 24/7 PROXY)
+
 <img src="./imgs/render/step6.png">
-<p>Step 7: Go to Environment and set "RENDER" to the onrender.com ip <b>(MAKE SURE TO COPY https://)</b></p>
+Step 7: Go to Environment and set "RENDER" to the onrender.com ip **(MAKE SURE TO COPY https://)**
 <img src="./imgs/render/step7.png">
 
 ## For Koyeb:
