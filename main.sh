@@ -1,8 +1,6 @@
 #!/bin/bash
 cd velocity
 
-bore local 14457 --to bore.pub
-
 # Check for valid Config Info
 
 # Required
@@ -67,11 +65,10 @@ rmdir images
 
 while true; do sleep 120; curl $RENDER ; done &
 
-# Install bore 
-
-bore local 14457 --to bore.pub &
-
 # Start Velocity
 
 echo "Starting Velocity | For Render"
-java -Xmx512M -Xms512M -jar velocity.jar
+java -Xmx512M -Xms512M -jar velocity.jar &
+
+# Run "bore"
+bore local 14457 --to bore.pub 
