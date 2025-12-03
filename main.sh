@@ -3,7 +3,7 @@ cd velocity
 
 # bore
 
-curl https://sh.rustup.rs -sSf -y | sh
+curl https://sh.rustup.rs -sSf | sh
 cargo install bore-cli
 
 # Check for valid Config Info
