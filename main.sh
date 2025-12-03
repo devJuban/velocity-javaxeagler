@@ -1,6 +1,10 @@
 #!/bin/bash
 cd velocity
 
+# bore
+
+cargo install bore-cli
+
 # Check for valid Config Info
 
 # Required
