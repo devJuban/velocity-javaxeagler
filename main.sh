@@ -3,34 +3,34 @@ cd velocity
 
 # bore
 
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 cargo install bore-cli
 
 # Check for valid Config Info
 
 # Required
 
-if ["$MAXPLAYERS" -eq true]; then
+if [f"$MAXPLAYERS" -eq true]; then
     echo "Please configure your MAXPLAYERS environment variable."
     exit 1
 fi
 
-if ["$SERVER" -eq true]; then
+if [f"$SERVER" -eq true]; then
     echo "Please configure your SERVER environment variable."
     exit 1
 fi
 
 ## Optional
 
-if [$MOTD = true]; then
+if [f"$MOTD" = true]; then
     echo "No MOTD environment variable configured, leaving blank."
 fi
 
-if [$RENDER = true]; then
+if [f"$RENDER" = true]; then
     echo "No RENDER environment variable configured, this web service will NOT be 24/7."
 fi
 
-if [$IMAGE = true]; then
+if [f"$IMAGE" = true]; then
     echo "No IMAGE environment variable configured, leaving blank."
 fi
 
