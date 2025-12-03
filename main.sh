@@ -4,7 +4,7 @@ cd velocity
 # bore
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-cargo install bore-cli
+cargo 
 
 # Check for valid Config Info
 
@@ -20,7 +20,7 @@ if [f"$SERVER" -eq true]; then
     exit 1
 fi
 
-## Optional
+# Optional
 
 if [f"$MOTD" = true]; then
     echo "No MOTD environment variable configured, leaving blank."
