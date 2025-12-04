@@ -3,8 +3,7 @@ cd velocity
 
 # bore
 
-sudo apt install openjdk-21-jdk -y
-apt install curl -y
+apt install openjdk-21-jdk -y
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 rustup
