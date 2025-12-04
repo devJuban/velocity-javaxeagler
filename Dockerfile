@@ -2,6 +2,7 @@ FROM ubuntu:24.04
 COPY . .
 
 RUN chmod +x main.sh
+RUN sudo apt install openjdk-21-jdk -y
 CMD ["./main.sh"]
 
 ## OLD
