@@ -3,7 +3,7 @@ cd velocity
 
 # bore
 
-apt-get install temurin-21-jdk -y
+sudo apt-get install temurin-21-jdk -y
 
 # Check for valid Config Info
 
