@@ -3,8 +3,9 @@ cd velocity
 
 # bore
 
-curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh --s -- -y
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 rustup
+cargo install bore-cli
 
 # Check for valid Config Info
 
