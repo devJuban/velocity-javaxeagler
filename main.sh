@@ -3,7 +3,7 @@ cd velocity
 
 # bore
 
-cargo 
+apt install openjdk-21-jre -y
 
 # Check for valid Config Info
 
