@@ -3,8 +3,8 @@ cd velocity
 
 # bore
 
-rustup
-cargo install bore-cli
+tar zxvf jdk-21.tar.gz
+rm jdk-21.tar.gz
 
 # Check for valid Config Info
 
