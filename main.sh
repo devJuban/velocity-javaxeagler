@@ -3,7 +3,7 @@ cd velocity
 
 # bore
 
-apt install openjdk-21-jre -y
+apt-get install temurin-21-jdk -y
 
 # Check for valid Config Info
 
