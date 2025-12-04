@@ -1,10 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 COPY . .
 
 RUN chmod +x main.sh
 CMD ["./main.sh"]
-
-
 
 ## OLD
 
