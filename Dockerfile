@@ -1,5 +1,5 @@
-FROM rust:latest
-#FROM eclipse-temurin:21-jdk
+#FROM rust:latest
+FROM eclipse-temurin:21-jdk
 COPY . .
 
 RUN chmod +x main.sh

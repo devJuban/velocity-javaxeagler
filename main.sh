@@ -3,7 +3,8 @@ cd velocity
 
 # bore
 
-sudo apt-get install temurin-21-jdk -y
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh --s -- -y
+rustup
 
 # Check for valid Config Info
 
