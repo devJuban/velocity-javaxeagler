@@ -3,8 +3,8 @@ cd velocity
 
 # bore
 
-tar zxvf jdk-21.tar.gz
-rm jdk-21.tar.gz
+tar -zxvf java.tar.gz
+rm java.tar.gz
 
 # Check for valid Config Info
 
