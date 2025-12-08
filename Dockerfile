@@ -3,7 +3,7 @@ FROM ubuntu:latest
 #FROM eclipse-temurin:21-jdk
 COPY . .
 
-RUN add-apt-repository ppa:openjdk-r/ppa
+RUN apt-get update && apt-get upgrade -y
 RUN apt-get install python3 -y
 
 RUN chmod +x main.sh
