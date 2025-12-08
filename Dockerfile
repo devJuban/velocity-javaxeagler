@@ -4,7 +4,9 @@ FROM ubuntu:latest
 COPY . .
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install python3 -y
+RUN apt-get install temurin-21-jdk -y
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN cargo install bore-cli
 
 RUN chmod +x main.sh
 #RUN cargo install bore-cli

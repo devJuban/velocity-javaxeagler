@@ -3,13 +3,6 @@ cd velocity
 
 # bore
 
-tar -zxvf java.tar.gz
-rm java.tar.gz
-
-update-alternatives --install /usr/bin/java java ./jdk-21.0.9/bin/java 1
-update-alternatives --install /usr/bin/javac javac ./jdk-21.0.9/bin/javac 1
-
-update-alternatives --config java
 # Check for valid Config Info
 
 # Required
