@@ -3,7 +3,7 @@ FROM ubuntu:latest
 #FROM eclipse-temurin:21-jdk
 COPY . .
 
-RUN apt-get install openjdk-21-jdk -y
+RUN apt-get install python3 -y
 
 RUN chmod +x main.sh
 #RUN cargo install bore-cli
