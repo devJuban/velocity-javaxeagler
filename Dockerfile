@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:stable
 #FROM rust:latest
 #FROM eclipse-temurin:21-jdk
 COPY . .
