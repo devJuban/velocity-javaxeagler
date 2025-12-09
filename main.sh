@@ -7,27 +7,27 @@ cd velocity
 
 # Required
 
-if [f"$MAXPLAYERS" -eq true]; then
+if [ "$MAXPLAYERS" = "true"]; then
     echo "Please configure your MAXPLAYERS environment variable."
     exit 1
 fi
 
-if [f"$SERVER" -eq true]; then
+if [ "$SERVER" = "true"]; then
     echo "Please configure your SERVER environment variable."
     exit 1
 fi
 
 # Optional
 
-if [f"$MOTD" = true]; then
+if [ "$MOTD" = "true"]; then
     echo "No MOTD environment variable configured, leaving blank."
 fi
 
-if [f"$RENDER" = true]; then
+if [ "$RENDER" = "true"]; then
     echo "No RENDER environment variable configured, this web service will NOT be 24/7."
 fi
 
-if [f"$IMAGE" = true]; then
+if [ "$IMAGE" = "true"]; then
     echo "No IMAGE environment variable configured, leaving blank."
 fi
 
