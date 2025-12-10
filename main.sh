@@ -40,6 +40,7 @@ echo "Your Render IP: $RENDER"
 echo "Your \"server-icon.png\" will be pulled from: $IMAGE"
 echo "Your Secret is: $SECRET"
 
+sed -i 's/${SECRET}/'"$SECRET"'/g' forwarding.secret
 sed -i 's/${MOTD}/'"$MOTD"'/g' velocity.toml
 sed -i 's/${MAXPLAYERS}/'"$MAXPLAYERS"'/g' velocity.toml
 sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
