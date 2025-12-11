@@ -86,9 +86,6 @@ try = [
 
 [forced-hosts]
 # Configure your forced hosts here.
-"${SERVER}" = [
-  "main"
-]
 
 [advanced]
 # How large a Minecraft packet has to be before we compress it. Setting this to zero will
