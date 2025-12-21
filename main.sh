@@ -33,11 +33,11 @@ fi
 
 # Display Config Info
 
-print($MAXPLAYERS)
-print($SERVER)
-print($MOTD)
-print($RENDER)
-print($IMAGE)
+echo $MAXPLAYERS
+echo $SERVER
+echo $MOTD
+echo $RENDER
+echo $IMAGE 
 
 echo "Your MOTD (eagler only): $MOTD"
 echo "Your Max Players (eagler only): $MAXPLAYERS"
