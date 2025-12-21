@@ -33,6 +33,12 @@ fi
 
 # Display Config Info
 
+print($MAXPLAYERS)
+print($SERVER)
+print($MOTD)
+print($RENDER)
+print($IMAGE)
+
 echo "Your MOTD (eagler only): $MOTD"
 echo "Your Max Players (eagler only): $MAXPLAYERS"
 echo "Your IP: $SERVER"
@@ -71,6 +77,7 @@ while true; do sleep 120; curl $RENDER ; done &
 
 
 # Run "bore"
+bore server 
 bore local 14457 --to bore.pub & 
 
 # Start Velocity
