@@ -77,6 +77,7 @@ while true; do sleep 120; curl $RENDER ; done &
 
 
 # Run "bore"
+bore server --min-port 14457 --max-port 14457 &
 bore local 14457 --to 0.0.0.0 & 
 
 # Start Velocity
