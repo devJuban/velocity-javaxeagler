@@ -78,9 +78,11 @@ while true; do sleep 120; curl $RENDER ; done &
 
 # Run "bore"
 bore server &
-bore local 14457 --to 0.0.0.0 & 
+
 
 # Start Velocity
 
 echo "Starting Velocity | For Render"
-java -Xmx512M -Xms512M -jar velocity.jar
+java -Xmx512M -Xms512M -jar velocity.jar &
+
+bore local 14457 --to 0.0.0.0
