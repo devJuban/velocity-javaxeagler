@@ -8,7 +8,7 @@ COPY . .
 #RUN apt-get install rustc -y
 #RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 #RUN apt-get install cargo -y
-RUN cargo install bore-cli
+#RUN cargo install bore-cli
 
 RUN chmod +x main.sh
 #RUN cargo install bore-cli
