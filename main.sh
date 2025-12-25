@@ -29,13 +29,14 @@ if [ "$IMAGE" = "true" ] || [ "$IMAGE" = "" ]; then
     echo "No IMAGE environment variable configured, leaving blank."
 fi
 
+if [ "$PLAY_SECRET" = "true" ] || [ "$PLAY_SECRET" = "" ]; then
+    echo "No PLAY_SECRET environment variable configured, this is normal if this is the first time you start the service."
+    PLAY_SECRET = ""
+fi
+
 # Display Config Info
 
-echo $MAXPLAYERS
-echo $SERVER
-echo $MOTD
-echo $RENDER
-echo $IMAGE 
+echo $PLAY_SECRET
 
 echo "Your MOTD (eagler only): $MOTD"
 echo "Your Max Players (eagler only): $MAXPLAYERS"
@@ -72,11 +73,6 @@ rmdir images
 # Set up 24/7 web service
 
 while true; do sleep 120; curl $RENDER ; done &
-
-
-# Run "bore"
-#bore server &
-#bore local 14457 --to 0.0.0.0 &
 
 # Start Velocity
 
