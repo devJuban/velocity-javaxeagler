@@ -31,7 +31,7 @@ fi
 
 if [ "$PLAY_SECRET" = "true" ] || [ "$PLAY_SECRET" = "" ]; then
     echo "No PLAY_SECRET environment variable configured, this is normal if this is the first time you start the service."
-    PLAY_SECRET = ""
+    PLAY_SECRET=""
 fi
 
 # Display Config Info
@@ -51,8 +51,9 @@ sed -i 's/${MAXPLAYERS}/'"$MAXPLAYERS"'/g' velocity.toml
 sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
 
 cd plugins/eaglerxserver
-
 sed -i 's/${MOTD}/'"$MOTD"'/g' listeners.toml
+cd ../velocit
+sed -i 's/${PLAY_SECRET}/'"$PLAY_SECRET"'/g' config.toml
 
 cd ../..
 
