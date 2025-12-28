@@ -1,0 +1,26 @@
+# EU Region
+version: "1"
+services:
+- type: web
+  name: velocity-javaxeagler
+  runtime: docker
+  repo: https://github.com/devJuban/velocity-javaxeagler
+  branch: render
+  plan: free
+  envVars:
+  - key: SECRET
+    generateValue: true
+  - key: IMAGE
+    sync: false
+  - key: RENDER
+    sync: false
+  - key: MOTD
+    sync: false
+  - key: MAXPLAYERS
+    sync: false
+  - key: SERVER
+    sync: false
+  region: frankfurt
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeployTrigger: off
