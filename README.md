@@ -1,5 +1,17 @@
 # velocity-javaxeagler
 
+## Links
+
+- Blueprints (Info): [temp](#blueprints)
+- Blueprints (Guide): [temp](#get-started)
+- Manual Guide (Info): [temp](#manual-deply)
+- Manual Guide (Render): [temp](#get-started-1)
+- Manual Guide (Koyeb): [temp](#koyeb)
+
+## Should I use this?
+
+Most likey, **no**.
+
 # Blueprints
 Introducing blueprints, blueprints make it easier for you to deploy velcoity-javaxeagler!
 
