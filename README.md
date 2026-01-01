@@ -30,7 +30,7 @@ We currently support 2 regions (US coming soon):
 
 <details>
 
-<summary>Koeyb</summary>
+<summary>Koyeb</summary>
 
 ### Koyeb
 
