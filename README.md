@@ -12,3 +12,27 @@ We currently support 2 regions (US coming soon):
 - ~~US-East-2 (Virgina, North America)~~
 
 ## Get Started
+
+> [!NOTE]
+> You will **not** be able to change the *.onrender.com ip (Blueprints only)!
+
+# Manual Deply
+
+## Get Started
+
+<details>
+
+    <summary>Render</summary>
+    ### Render
+
+</details>
+
+<details>
+
+    <summary>Koeyb</summary>
+    ### Koyeb
+
+    > [!CAUTION]
+    > Koyeb is **no** longer supported, consider switching to [Render](#Render)
+
+</details>
