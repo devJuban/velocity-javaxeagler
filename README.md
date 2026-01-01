@@ -20,7 +20,7 @@ We currently support 2 regions (US coming soon):
 
 ## Get Started
 
-<details>
+<details open>
 
 <summary>Render</summary>
 
