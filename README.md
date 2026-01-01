@@ -22,17 +22,17 @@ We currently support 2 regions (US coming soon):
 
 <details>
 
-    <summary>Render</summary>
-    ### Render
+<summary>Render</summary>
+### Render
 
 </details>
 
 <details>
 
-    <summary>Koeyb</summary>
-    ### Koyeb
+<summary>Koeyb</summary>
+### Koyeb
 
-    > [!CAUTION]
-    > Koyeb is **no** longer supported, consider switching to [Render](#Render)
+> [!CAUTION]
+> Koyeb is **no** longer supported, consider switching to [Render](#render)
 
 </details>
