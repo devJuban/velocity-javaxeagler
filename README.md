@@ -28,13 +28,15 @@ We currently support 2 regions (US coming soon):
 
 </details>
 
+> [!CAUTION]
+> Koyeb is **no** longer supported, consider switching to [Render](#render)
+
 <details>
 
 <summary>Koyeb</summary>
 
 ### Koyeb
 
-> [!CAUTION]
-> Koyeb is **no** longer supported, consider switching to [Render](#render)
+
 
 </details>
