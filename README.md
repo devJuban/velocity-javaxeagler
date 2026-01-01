@@ -23,6 +23,7 @@ We currently support 2 regions (US coming soon):
 <details>
 
 <summary>Render</summary>
+
 ### Render
 
 </details>
@@ -30,6 +31,7 @@ We currently support 2 regions (US coming soon):
 <details>
 
 <summary>Koeyb</summary>
+
 ### Koyeb
 
 > [!CAUTION]
