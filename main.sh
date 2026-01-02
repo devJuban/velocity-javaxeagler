@@ -55,7 +55,7 @@ sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
 
 cd plugins/eaglerxserver
 #sed -i 's/${MOTD}/'"$MOTD"'/g' listeners.toml
-sed 's/${MOTD}/'"$MOTD"'/' listeners.toml
+sed -i 's|${MOTD}|'"$MOTD"'|' listeners.toml
 cd ../..
 
 # Set up server-icon.png
