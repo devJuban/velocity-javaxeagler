@@ -1,16 +1,33 @@
 # velocity-javaxeagler
 
-## Links
+## Quick Links
 
-- Blueprints (Info): [temp](#blueprints)
-- Blueprints (Guide): [temp](#get-started)
-- Manual Guide (Info): [temp](#manual-deply)
-- Manual Guide (Render): [temp](#get-started-1)
-- Manual Guide (Koyeb): [temp](#koyeb)
+- [Blueprints (Info)](#blueprints)
+- [Blueprints (Guide)](#get-started)
+- [Manual Guide (Info)](#manual-deply)
+- [Manual Guide (Render)](#get-started-1)
+- [Manual Guide (Koyeb)](#koyeb)
 
 ## Should I use this?
 
 Most likey, **no**.
+
+## QNA
+
+## Plans
+
+### Planned
+
+- Add US regions
+
+### Maybe
+
+- None.
+
+### Not Planned
+
+- Support for Minekube (etc.)
+- Add support for koyeb
 
 # Blueprints
 Introducing blueprints, blueprints make it easier for you to deploy velcoity-javaxeagler!
@@ -32,7 +49,7 @@ We currently support 2 regions (US coming soon):
 
 ## Get Started
 
-<details open>
+<details open> 
 
 <summary>Render</summary>
 
