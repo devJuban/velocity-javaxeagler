@@ -16,15 +16,15 @@ Most likey, **no**.
 
 ## Plans
 
-### Planned
+### Planned:
 
 - Add US regions
 
-### Maybe
+### Maybe:
 
 - None.
 
-### Not Planned
+### Not Planned:
 
 - Support for Minekube (etc.)
 - Add support for koyeb
