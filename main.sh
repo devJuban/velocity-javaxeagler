@@ -14,7 +14,7 @@ fi
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    MOTD=&b&lThis is server is being hosted by velocity-javaxeagler&0.&b&lYou can too host a server by visiting &e&n&ltinyurl.com/mvk7f4xh
+    MOTD="&b&lThis is server is being hosted by velocity-javaxeagler&0.&b&lYou can too host a server by visiting &e&n&ltinyurl.com/mvk7f4xh"
     #MOTD="\u00A7b\u00A7lThis is server is being hosted by velocity-javaxeagler\u00A70.\u00A7b\u00A7lYou can too host a server by visiting \u00A7e\u00A7n\u00A7ltinyurl.com/mvk7f4xh"
     #MOTD="&b&lThis is server is being hosted by velocity-javaxeagler&0.&b&lYou can too host a server by visiting &e&n&ltinyurl.com/mvk7f4xh"
 fi
@@ -32,9 +32,12 @@ if [ "$IMAGE" = "true" ] || [ "$IMAGE" = "" ]; then
     echo "No IMAGE environment variable configured, leaving blank."
 fi
 
-# Display Config Info
+if [ "$SECRET" = "true" ] || [ "$SECRET" = "" ]; then
+    echo "No SECRET environment variable configured, generating a random one."
+    SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1 )
+fi
 
-SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1 )
+# Display Config Info
 
 echo "Your MOTD (eagler only): $MOTD"
 echo "Your Max Players (eagler only): $MAXPLAYERS"
