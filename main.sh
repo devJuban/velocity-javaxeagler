@@ -75,4 +75,4 @@ while true; do sleep 120; curl 0.0.0.0 ; done &
 # Start Velocity
 
 echo "Starting Velocity | For Render"
-java -Xms512M -Xmx512M-XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar velocity.jar
+java -Xms512M -Xmx512M -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar velocity.jar
