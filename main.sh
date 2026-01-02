@@ -14,7 +14,7 @@ fi
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    MOTD="§b§lThis is server is being hosted by velocity-javaxeagler§0.§b§lYou can too host a server by visiting §e§n§ltinyurl.com/mvk7f4xh"
+    MOTD="&bThis is server is being hosted by velocity-javaxeagler!&r\n&bYou can also host a server by visiting &e&n&ltinyurl.com/mvk7f4xh&b!"
     #MOTD="\u00A7b\u00A7lThis is server is being hosted by velocity-javaxeagler\u00A70.\u00A7b\u00A7lYou can too host a server by visiting \u00A7e\u00A7n\u00A7ltinyurl.com/mvk7f4xh"
     #MOTD="&b&lThis is server is being hosted by velocity-javaxeagler&0.&b&lYou can too host a server by visiting &e&n&ltinyurl.com/mvk7f4xh"
 fi
