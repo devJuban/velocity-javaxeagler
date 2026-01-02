@@ -1,38 +1,25 @@
 #!/bin/bash
 cd velocity
 
-# Change these values if you are self hosting
-# Set the render variable to "self-host"
-
-MOTD=$MOTD
-MAXPLAYERS=$MAXPLAYERS
-SERVER=$SERVER
-RENDER=$RENDER
-IMAGE=$IMAGE
-SECRET=$SECRET
-
 # Check for valid Config Info
 
-# Required
-
-# move down to optional (below)
-
-if [ "$MAXPLAYERS" = "true" ] || [ "$MAXPLAYERS" = "" ]; then
-    echo "Please configure your MAXPLAYERS environment variable."
-    exit 1
-fi
-
-# dont move $server down to optional
+## Required
 
 if [ "$SERVER" = "true" ] || [ "$SERVER" = "" ]; then
     echo "Please configure your SERVER environment variable."
     exit 1
 fi
 
-# Optional
+## Optional
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
-    echo "No MOTD environment variable configured, leaving blank."
+    echo "No MOTD environment variable configured, setting to default."
+    MOTD="&b&lThis is server is being hosted by velocity-javaxeagler&0.&b&lYou can too host a server by visiting &e&n&ltinyurl.com/mvk7f4xh"
+fi
+
+if [ "$MAXPLAYERS" = "true" ] || [ "$MAXPLAYERS" = "" ]; then
+    echo "No MAXPLAYERS environment variable configured, setting to default (100)."
+    MAXPLAYERS=100
 fi
 
 if [ "$RENDER" = "true" ] || [ "$RENDER" = "" ]; then
@@ -44,6 +31,8 @@ if [ "$IMAGE" = "true" ] || [ "$IMAGE" = "" ]; then
 fi
 
 # Display Config Info
+
+SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1 )
 
 echo "Your MOTD (eagler only): $MOTD"
 echo "Your Max Players (eagler only): $MAXPLAYERS"
