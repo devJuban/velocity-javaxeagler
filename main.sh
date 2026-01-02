@@ -61,7 +61,7 @@ wget -O server-icon.png $IMAGE
 
 #while true; do sleep 120; curl $RENDER ; done &
 # 24/7 beta
-while true; do sleep 120; curl 0.0.0.0 ; done &
+while true; do sleep 120; curl 0.0.0.0:14457 ; done &
 # Start Velocity
 
 echo "Starting Velocity | For Render"
