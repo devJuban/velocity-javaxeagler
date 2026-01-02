@@ -14,7 +14,7 @@ fi
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    MOTD="§bThis server is hosted by v-jXe! <center>§n§e§n§ltinyurl.com/mvk7f4xh§b!"
+    MOTD="§bThis server is hosted by v-jXe! <center>§n§e§n§ltinyurl.com/mvk7f4xh"
 fi
 
 if [ "$MAXPLAYERS" = "true" ] || [ "$MAXPLAYERS" = "" ]; then
