@@ -43,11 +43,12 @@ echo "Your Render IP: $RENDER"
 echo "Your \"server-icon.png\" will be pulled from: $IMAGE"
 echo "Your Secret is: $SECRET"
 
-sed -i 's/${SECRET}/'"$SECRET"'/g' forwarding.secret
-sed -i 's/${MOTD}/'"$MOTD"'/g' velocity.toml
-sed -i 's/${MAXPLAYERS}/'"$MAXPLAYERS"'/g' velocity.toml
-sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
 
+#sed -i 's/${SECRET}/'"$SECRET"'/g' forwarding.secret
+#sed -i 's/${MOTD}/'"$MOTD"'/g' velocity.toml
+#sed -i 's/${MAXPLAYERS}/'"$MAXPLAYERS"'/g' velocity.toml
+#sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
+sed 's/${SERVER}/'"$SERVER"'' velocity.toml
 cd plugins/eaglerxserver
 sed -i 's/${MOTD}/'"$MOTD"'/g' listeners.toml
 cd ../velocit
