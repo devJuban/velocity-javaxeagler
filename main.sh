@@ -44,15 +44,12 @@ echo "Your Render IP: $RENDER"
 echo "Your \"server-icon.png\" will be pulled from: $IMAGE"
 echo "Your Secret is: $SECRET"
 
-
-sed -i 's/${SECRET}/'"$SECRET"'/g' forwarding.secret
-sed -i 's/${MOTD}/'"$MOTD"'/g' velocity.toml
-sed -i 's/${MAXPLAYERS}/'"$MAXPLAYERS"'/g' velocity.toml
-sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
-
+sed -i 's|${SECRET}|'"$SECRET"'|g' forwarding.secret
+sed -i 's|${MOTD}|'"$MOTD"'|g' velocity.toml
+sed -i 's|${MAXPLAYERS}|'"$MAXPLAYERS"'|g' velocity.toml
+sed -i 's|${SERVER}|'"$SERVER"'|g' velocity.toml
 
 cd plugins/eaglerxserver
-#sed -i 's/${MOTD}/'"$MOTD"'/g' listeners.toml
 sed -i 's|${MOTD}|'"$MOTD"'|g' listeners.toml
 cd ../..
 
@@ -62,9 +59,8 @@ wget -O server-icon.png $IMAGE
 
 # Set up 24/7 web service
 
-#while true; do sleep 120; curl $RENDER ; done &
-# 24/7 beta
-while true; do sleep 120; curl 0.0.0.0:14457 ; done &
+while true; do sleep 120; curl $RENDER ; done &
+
 # Start Velocity
 
 echo "Starting Velocity | For Render"
