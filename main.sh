@@ -14,7 +14,7 @@ fi
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    MOTD="&b&lThis is server is being hosted by velocity-javaxeagler&0.&b&lYou can too host a server by visiting &e&n&ltinyurl.com/mvk7f4xh"
+    MOTD="§b§lThis is server is being hosted by velocity-javaxeagler§0.§b§lYou can too host a server by visiting §e§n§ltinyurl.com/mvk7f4xh"
     #MOTD="\u00A7b\u00A7lThis is server is being hosted by velocity-javaxeagler\u00A70.\u00A7b\u00A7lYou can too host a server by visiting \u00A7e\u00A7n\u00A7ltinyurl.com/mvk7f4xh"
     #MOTD="&b&lThis is server is being hosted by velocity-javaxeagler&0.&b&lYou can too host a server by visiting &e&n&ltinyurl.com/mvk7f4xh"
 fi
@@ -48,13 +48,13 @@ echo "Your Secret is: $SECRET"
 
 
 sed -i 's/${SECRET}/'"$SECRET"'/g' forwarding.secret
-sed -i 's/${MOTD}/'"&4&lTesting"'/g' velocity.toml
+sed -i 's/${MOTD}/'"$MOTD"'/g' velocity.toml
 sed -i 's/${MAXPLAYERS}/'"$MAXPLAYERS"'/g' velocity.toml
 sed -i 's/${SERVER}/'"$SERVER"'/g' velocity.toml
 
 
 cd plugins/eaglerxserver
-sed -i 's/${MOTD}/'"&4&lTesting"'/g' listeners.toml
+sed -i 's/${MOTD}/'"$MOTD"'/g' listeners.toml
 cd ../..
 
 # Set up server-icon.png
