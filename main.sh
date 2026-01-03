@@ -14,8 +14,6 @@ fi
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    #MOTD="§bThis server is hosted by §4§n§lv-jXe!§n§e§n§ltinyurl.com/mvk7f4xh"
-    MOTD="      \u00A7bThis server is being hosted by \u00A74\u00A7l\u00A7nv-jXe!\u00A7r\n              \u00A7e\u00A7l\u00A7ntinyurl.com/mvk7f4xh"
     MOTD="      \&bThis server is being hosted by \&4\&l\&nv-jXe!\&r\n              \&e\&l\&ntinyurl.com/mvk7f4xh"
 fi
 
@@ -48,15 +46,11 @@ echo "Your Secret is: $SECRET"
 
 sed -i 's|${SECRET}|'"$SECRET"'|g' forwarding.secret
 sed -i 's|${MOTD}|'"$MOTD"'|g' velocity.toml
-#sed -i 's|${MOTD}|'$MOTD'|g' velocity.toml
 sed -i 's|${MAXPLAYERS}|'"$MAXPLAYERS"'|g' velocity.toml
 sed -i 's|${SERVER}|'"$SERVER"'|g' velocity.toml
-echo $(cat velocity.toml | grep "motd") 
 
 cd plugins/eaglerxserver
 sed -i 's|${MOTD}|'"$MOTD"'|g' listeners.toml
-#sed -i 's|${MOTD}|'$MOTD'|g' listeners.toml
-echo $(cat listeners.toml | grep "server_motd") 
 cd ../..
 
 # Set up server-icon.png
@@ -69,5 +63,4 @@ while true; do sleep 120; curl $RENDER ; done &
 
 # Start Velocity
 
-echo "Starting Velocity | For Render"
 java -Xms512M -Xmx512M -jar velocity.jar
