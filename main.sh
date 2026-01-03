@@ -43,8 +43,6 @@ convert_motd_velocity() {
     echo "$new_motd"
 }
 
-echo $(convert_motd_velocity "$MOTD")
-
 # Check for valid Config Info & Display Config Info
 
 ## Required
@@ -53,15 +51,14 @@ if [ "$SERVER" = "true" ] || [ "$SERVER" = "" ]; then
     echo "Please configure your SERVER environment variable."
     exit 1
 else
-    echo "\nYour IP: $SERVER"
+    echo "Your IP: $SERVER"
 fi
 
 ## Optional
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    #MOTD="         \&bThis server is hosted by \&4\&l\&nv-jXe!\&r\n               \&e\&l\&ntinyurl.com/vv-jXe"
-    MOTD=$(convert_motd "         &bThis server is hosted by &4&l&nv-jXe!&r\n               &e&l&ntinyurl.com/vv-jXe")
+    MOTD="         &bThis server is hosted by &4&l&nv-jXe!&r\n               &e&l&ntinyurl.com/vv-jXe"
 else
     echo "Your MOTD: $MOTD"
 fi
@@ -102,12 +99,12 @@ fi
 # Set config
 
 sed -i 's|${SECRET}|'"$SECRET"'|g' forwarding.secret
-sed -i 's|${MOTD}|'"$MOTD"'|g' velocity.toml
+sed -i 's|${MOTD}|'"$(convert_motd_velocity "$MOTD")"'|g' velocity.toml
 sed -i 's|${MAXPLAYERS}|'"$MAXPLAYERS"'|g' velocity.toml
 sed -i 's|${SERVER}|'"$SERVER"'|g' velocity.toml
 
 cd plugins/eaglerxserver
-sed -i 's|${MOTD}|'"$MOTD"'|g' listeners.toml
+sed -i 's|${MOTD}|'"$(covert_motd "$MOTD")"'|g' listeners.toml
 cd ../..
 
 # Start Velocity & playit agent
