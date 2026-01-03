@@ -4,7 +4,7 @@ cd velocity
 # Functions
 
 convert_motd() {
-    return "${$1//\&/"\\&"}"
+    return "${1//\&/"\\&"}"
 }
 
 # Check for valid Config Info & Display Config Info
