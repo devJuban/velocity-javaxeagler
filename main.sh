@@ -16,7 +16,7 @@ fi
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    MOTD="      \&bThis server is being hosted by \&4\&l\&nv-jXe!\&n               \&e\&l\&ntinyurl.com/vv-jXe"
+    MOTD="         \&bThis server is hosted by \&4\&l\&nv-jXe!\&r\n               \&e\&l\&ntinyurl.com/vv-jXe"
 else
     echo "Your MOTD: $MOTD"
 fi
