@@ -3,7 +3,7 @@ cd velocity
 
 # playit agent
 playit start &
-echo "Please claim the tunnel above, you have 5 seconds before the script continues..."
+echo "Please claim the tunnel below, you have 5 seconds before the script continues..."
 sleep 5
 
 # Check for valid Config Info & Display Config Info
@@ -14,7 +14,7 @@ if [ "$SERVER" = "true" ] || [ "$SERVER" = "" ]; then
     echo "Please configure your SERVER environment variable."
     exit 1
 else
-    echo "Your IP: $SERVER"
+    echo "\nYour IP: $SERVER"
 fi
 
 ## Optional
