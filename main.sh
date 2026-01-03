@@ -1,11 +1,6 @@
 #!/bin/bash
 cd velocity
 
-# playit agent
-playit start &
-echo "Please claim the tunnel below, you have 5 seconds before the script continues..."
-sleep 5
-
 # Check for valid Config Info & Display Config Info
 
 ## Required
@@ -21,7 +16,7 @@ fi
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
     echo "No MOTD environment variable configured, setting to default."
-    MOTD="      \&bThis server is being hosted by \&4\&l\&nv-jXe!\&r\n              \&e\&l\&ntinyurl.com/mvk7f4xh"
+    MOTD="      \&bThis server is being hosted by \&4\&l\&nv-jXe!&r\n               \&e\&l\&ntinyurl.com/vv-jXe"
 else
     echo "Your MOTD: $MOTD"
 fi
@@ -46,6 +41,9 @@ if [ "$IMAGE" = "true" ] || [ "$IMAGE" = "" ]; then
     echo "No IMAGE environment variable configured, leaving blank."
 else
     echo "Your \"server-icon.png\" will be pulled from: $IMAGE"
+
+    # Set up server-icon.png
+    wget -O server-icon.png $IMAGE
 fi
 
 if [ "$SECRET" = "true" ] || [ "$SECRET" = "" ]; then
@@ -67,10 +65,6 @@ cd plugins/eaglerxserver
 sed -i 's|${MOTD}|'"$MOTD"'|g' listeners.toml
 cd ../..
 
-# Set up server-icon.png
-
-wget -O server-icon.png $IMAGE
-
-# Start Velocity
-
+# Start Velocity & playit agent
+playit start &
 java -Xms512M -Xmx512M -jar velocity.jar
