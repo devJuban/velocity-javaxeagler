@@ -8,7 +8,7 @@ if [ "$PLAYIT" = "true" ] || [ "$PLAYIT" = "" ]; then
     echo "WARN: No PLAYIT environment variable configured, this is normal if this is your first deploy."
 else
     echo "Your PLAYIT Secret is: $PLAYIT"
-    echo "secret_key: = \"$PLAYIT\"" > -p ./.config/playit_gg/playit.toml
+    echo "secret_key: = \"$PLAYIT\"" >> -p ./.config/playit_gg/playit.toml
 fi
 
 playit start &
