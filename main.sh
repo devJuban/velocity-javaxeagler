@@ -28,7 +28,7 @@ convert_motd_velocity() {
     ["&f"]="<white>"
     ["&l"]="<bold>"
     ["&m"]="<strikethrough>"
-    ["&n"]="<underline>"
+    ["&n"]="<underlined>"
     ["&o"]="<italic>"
     ["&k"]="<obfuscated>"
     ["&r"]="<reset>"
