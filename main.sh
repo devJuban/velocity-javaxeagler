@@ -81,6 +81,9 @@ fi
 
 if [ "$IMAGE" = "true" ] || [ "$IMAGE" = "" ]; then
     echo "WARN: No IMAGE environment variable configured, leaving blank."
+
+    # Rename server-icon-default.png to server-icon.png
+    mv server-icon-default.png server-icon.png
 else
     echo "Your \"server-icon.png\" will be pulled from: $IMAGE"
 
@@ -104,7 +107,7 @@ sed -i 's|${MAXPLAYERS}|'"$MAXPLAYERS"'|g' velocity.toml
 sed -i 's|${SERVER}|'"$SERVER"'|g' velocity.toml
 
 cd plugins/eaglerxserver
-sed -i 's|${MOTD}|'"$(covert_motd "$MOTD")"'|g' listeners.toml
+sed -i 's|${MOTD}|'"$(convert_motd "$MOTD")"'|g' listeners.toml
 cd ../..
 
 # Start Velocity & playit agent
