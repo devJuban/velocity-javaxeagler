@@ -48,7 +48,7 @@ convert_motd_velocity() {
 ## Required
 
 if [ "$SERVER" = "true" ] || [ "$SERVER" = "" ]; then
-    echo "Please configure your SERVER environment variable."
+    echo "ERROR: Please configure your SERVER environment variable."
     exit 1
 else
     echo "Your IP: $SERVER"
@@ -57,21 +57,21 @@ fi
 ## Optional
 
 if [ "$MOTD" = "true" ] || [ "$MOTD" = "" ]; then
-    echo "No MOTD environment variable configured, setting to default."
+    echo "WARN: No MOTD environment variable configured, setting to default."
     MOTD="         &bThis server is hosted by &4&l&nv-jXe!&r\n               &e&l&ntinyurl.com/vv-jXe"
 else
     echo "Your MOTD: $MOTD"
 fi
 
 if [ "$MAXPLAYERS" = "true" ] || [ "$MAXPLAYERS" = "" ]; then
-    echo "No MAXPLAYERS environment variable configured, setting to default (100)."
+    echo "WARN: No MAXPLAYERS environment variable configured, setting to default (100)."
     MAXPLAYERS=100
 else
     echo "Your Max Players: $MAXPLAYERS"
 fi
 
 if [ "$RENDER" = "true" ] || [ "$RENDER" = "" ]; then
-    echo "No RENDER environment variable configured, this web service will NOT be 24/7."
+    echo "WARN: No RENDER environment variable configured, this web service will NOT be 24/7."
 else
     echo "Your Render IP: $RENDER"
 
@@ -80,7 +80,7 @@ else
 fi
 
 if [ "$IMAGE" = "true" ] || [ "$IMAGE" = "" ]; then
-    echo "No IMAGE environment variable configured, leaving blank."
+    echo "WARN: No IMAGE environment variable configured, leaving blank."
 else
     echo "Your \"server-icon.png\" will be pulled from: $IMAGE"
 
@@ -89,7 +89,7 @@ else
 fi
 
 if [ "$SECRET" = "true" ] || [ "$SECRET" = "" ]; then
-    echo "No SECRET environment variable configured, generating a random one."
+    echo "WARN: No SECRET environment variable configured, generating a random one."
     SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1 )
     echo "Your Secret is: $SECRET"
 else
