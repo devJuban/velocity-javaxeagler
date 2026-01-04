@@ -2,17 +2,17 @@
 
 # Set playit.gg agent secret
 
-mkdir .config/playit_gg
+mkdir -p ./.config/playit_gg
 
 if [ "$PLAYIT" = "true" ] || [ "$PLAYIT" = "" ]; then
     echo "WARN: No PLAYIT environment variable configured, this is normal if this is your first deploy."
 else
     echo "Your PLAYIT Secret is: $PLAYIT"
-    echo "secret_key: = \"$PLAYIT\"" > .config/playit_gg/playit.toml
+    echo "secret_key: = \"$PLAYIT\"" > ./.config/playit_gg/playit.toml
 fi
 
 playit start &
-echo "WARN: $(cat .config/playit_gg/playit.toml), if this is your first deployment make sure to copy the secret_key!"
+echo "WARN: $(cat ./.config/playit_gg/playit.toml), if this is your first deployment make sure to copy the secret_key!"
 
 cd velocity
 
