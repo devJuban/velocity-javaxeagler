@@ -10,10 +10,11 @@ else
     echo "Your PLAYIT Secret is: $PLAYIT"
     echo "secret_key: = \"$PLAYIT\"" >> -p ./.config/playit_gg/playit.toml
 fi
-cd ./.config/playit_gg
-ls -a
+
 playit start &
 echo "WARN: $(cat ./.config/playit_gg/playit.toml), if this is your first deployment make sure to copy the secret_key!"
+
+#while [ ! -f ./.config/playit_gg/playit.toml ]; do; sleep 120; done &
 
 cd velocity
 
