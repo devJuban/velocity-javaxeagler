@@ -12,9 +12,9 @@ else
 fi
 
 playit start &
-echo "WARN: $(cat ./.config/playit_gg/playit.toml), if this is your first deployment make sure to copy the secret_key!"
 
-#while [ ! -f ./.config/playit_gg/playit.toml ]; do; sleep 120; done &
+#while [ ! -f ./.config/playit_gg/playit.toml ]; do; sleep 1; echo "Please claim your playit.gg agent..." ; done &
+echo "WARN: $(cat ./.config/playit_gg/playit.toml), if this is your first deployment make sure to copy the secret_key!"
 
 cd velocity
 
