@@ -9,7 +9,7 @@ convert_legacy() {
 
 convert_motd() {
     c_motd=$(convert_legacy "$1")
-    echo "${c_motd//\&/"&"}"
+    echo "${c_motd//\&/"\&"}"
 }
 
 convert_motd_velocity() {
