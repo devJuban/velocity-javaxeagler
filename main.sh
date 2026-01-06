@@ -1,27 +1,15 @@
 #!/bin/bash
-
-# Set playit.gg agent secret
-
-mkdir -p ./.config/playit_gg
-
-if [ "$PLAYIT" = "true" ] || [ "$PLAYIT" = "" ]; then
-    echo "WARN: No PLAYIT environment variable configured, this is normal if this is your first deploy."
-else
-    echo "Your PLAYIT Secret is: $PLAYIT"
-    echo "secret_key: = \"$PLAYIT\"" >> -p ./.config/playit_gg/playit.toml
-fi
-
-playit start &
-
-while [! -f ./.config/playit_gg/playit.toml] ; do sleep 1; echo "Please claim your playit.gg agent..." ; done &
-echo "WARN: $(cat ./.config/playit_gg/playit.toml), if this is your first deployment make sure to copy the secret_key!"
-
 cd velocity
 
 # Functions
 
+convert_legacy() {
+    echo "${1//§/"&"}"
+}
+
 convert_motd() {
-    echo "${1//\&/"\\&"}"
+    c_motd=$(convert_legacy "$1")
+    echo "${c_motd//\&/"&"}"
 }
 
 convert_motd_velocity() {
@@ -51,7 +39,7 @@ convert_motd_velocity() {
     ["&r"]="<reset>"
     )
 
-    new_motd=$1
+    new_motd=$(convert_legacy "$1")
 
     for code in "${!converted_color_codes[@]}"; do
         new_motd="${new_motd//$code/${converted_color_codes[$code]}}"
@@ -116,8 +104,6 @@ else
     echo "Your Secret is: $SECRET"
 fi
 
-echo f"WARN: $(cat .config/playit_gg/playit.toml)"
-
 # Set config
 
 sed -i 's|${SECRET}|'"$SECRET"'|g' forwarding.secret
@@ -130,4 +116,5 @@ sed -i 's|${MOTD}|'"$(convert_motd "$MOTD")"'|g' listeners.toml
 cd ../..
 
 # Start Velocity & playit agent
+playit start &
 java -Xms512M -Xmx512M -jar velocity.jar
