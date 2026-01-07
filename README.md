@@ -39,7 +39,7 @@ Simply it would use too much memory and would make your server crash more often.
 ### Not Planned:
 
 - Support for Minekube (etc.)
-- Koyeb Support
+- Future Koyeb Support
 - Bedrock support
 
 # Blueprints
@@ -58,26 +58,6 @@ We currently support 5 regions:
 > [!NOTE]
 > You will **not** be able to change the *.onrender.com ip (Blueprints only)!
 
-Visit [Render](https://dashboard.render.com/)
-Login into your account
-Click New, then click Web Service
-Select Public Git Repository
-Connect `https://github.com/devJuban/velocity-javaxeagler-blueprints`
-Name your Web Service (the name will be linked to the .onrender.com ip)
-Select Docker as the language
-Select the render branch
-Choose the region closest to you (lower ping)
-Select the free plan
-You can create 6 environment variables (see below), but only the `SERVER` variable is required.
-```
-SERVER=[SUBDOMAIN].<DOMAIN>.<TLD>:<PORT>
-MOTD=<STR>
-MAXPLAYERS=<INT>
-RENDER=<STR>
-IMAGE=<STR>
-SECRET=<STR>
-```
-
 # Manual Deply
 
 ## Get Started
@@ -87,6 +67,42 @@ SECRET=<STR>
 <summary>Render</summary>
 
 ### Render
+
+Visit [Render](https://dashboard.render.com/)<br>
+Login into your account<br>
+Click New, then click Web Service<br>
+Select Public Git Repository<br>
+Connect `https://github.com/devJuban/velocity-javaxeagler-blueprints`<br>
+Name your Web Service (the name will be linked to the .onrender.com IP)<br>
+Select Docker as the language<br>
+Select the render branch<br>
+Choose the region closest to you (lower ping)<br>
+Select the free plan<br>
+You can create 6 environment variables (see below), but only the `SERVER` variable is required.<br>
+
+```
+SERVER
+MOTD
+MAXPLAYERS
+RENDER
+IMAGE
+SECRET
+```
+
+<details open>
+
+<summary>Configuring Environment Variables</summary>
+
+#### Configuring Environment Variables
+
+- SERVER - Include your IP (domain/ipv4/ipv6) with the port (eg. domain.tld:<PORT> (coolserver.com:5000, IPv4/IPv6:<PORT> (127.0.0.1:25565)).
+- MOTD - Recommended using [MCTools](https://mctools.org/motd-creator), copy the BungeeCord MOTD (without the quotes).
+- MAXPLAYERS - Any number, althought Velocity does not support a cap on the number of players online.
+- RENDER - Your render IP, you get your render IP once you deploy your Web Service.
+- IMAGE - Any image off the web, make sure the URL includes .png (**ONLY** .png, eg. imagehosting.platform/admin/servericon.png).
+- SECRET - You can click the purple wand to automatically generate a SECRET, not settings one will randomly generate one which will be displayed in the output.
+
+</details>
 
 </details>
 
