@@ -80,14 +80,14 @@ Choose the region closest to you (lower ping)<br>
 Select the free plan<br>
 You can create 6 environment variables (see below), but only the `SERVER` variable is required.<br>
 
-``
-SERVER<br>
-MOTD<br>
-MAXPLAYERS<br>
-RENDER<br>
-IMAGE<br>
+```
+SERVER
+MOTD
+MAXPLAYERS
+RENDER
+IMAGE
 SECRET
-``
+```
 
 <details open>
 
