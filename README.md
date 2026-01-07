@@ -95,7 +95,7 @@ SECRET
 
 #### Configuring Environment Variables
 
-- SERVER - Include your IP (domain/ipv4/ipv6) with the port (eg. domain.tld:<PORT> (coolserver.com:5000, IPv4/IPv6:<PORT> (127.0.0.1:25565)).
+- SERVER - Include your IP (domain/ipv4/ipv6) with the port (eg. domain.tld:&ltPORT&gt (coolserver.com:5000, IPv4/IPv6:&ltPORT&gt (127.0.0.1:25565)).
 - MOTD - Recommended using [MCTools](https://mctools.org/motd-creator), copy the BungeeCord MOTD (without the quotes).
 - MAXPLAYERS - Any number, althought Velocity does not support a cap on the number of players online.
 - RENDER - Your render IP, you get your render IP once you deploy your Web Service.
