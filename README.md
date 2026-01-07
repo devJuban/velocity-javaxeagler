@@ -68,17 +68,17 @@ We currently support 5 regions:
 
 ### Render
 
-Visit [Render](https://dashboard.render.com/)<br>
-Login into your account<br>
-Click New, then click Web Service<br>
-Select Public Git Repository<br>
-Connect `https://github.com/devJuban/velocity-javaxeagler-blueprints`<br>
-Name your Web Service (the name will be linked to the .onrender.com IP)<br>
-Select Docker as the language<br>
-Select the render branch<br>
-Choose the region closest to you (lower ping)<br>
-Select the free plan<br>
-You can create 6 environment variables (see below), but only the `SERVER` variable is required.<br>
+1. Visit [Render](https://dashboard.render.com/)<br>
+2. Login into your account<br>
+3. Click New, then click Web Service<br>
+4. Select Public Git Repository<br>
+5. Connect `https://github.com/devJuban/velocity-javaxeagler-blueprints`<br>
+6. Name your Web Service (the name will be linked to the .onrender.com IP)<br>
+7. Select Docker as the language<br>
+8. Select the render branch<br>
+9. Choose the region closest to you (lower ping)<br>
+10. Select the free plan<br>
+11. You can create 6 environment variables (see below), but only the `SERVER` variable is required.<br>
 
 ```
 SERVER
