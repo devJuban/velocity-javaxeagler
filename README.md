@@ -38,7 +38,7 @@ The issues tab.
 
 ### Maybe:
 
-- None.
+- Unattended playit.gg setup (this will come when playit.gg sets it up)
 
 ### Not Planned:
 
