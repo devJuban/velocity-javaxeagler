@@ -103,7 +103,7 @@ if [ "$SECRET" = "true" ] || [ "$SECRET" = "" ]; then
 else
     echo "Your Secret is: $SECRET"
 fi
-
+ 
 # Set config
 
 sed -i 's|${SECRET}|'"$SECRET"'|g' forwarding.secret
