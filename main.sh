@@ -117,4 +117,4 @@ cd ../..
 
 # Start Velocity & playit agent
 playit start &
-java -Xms512M -Xmx512M -jar velocity.jar 
+java -Xms512M -Xmx512M -jar velocity.jar
