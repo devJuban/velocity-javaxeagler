@@ -104,7 +104,7 @@ else
     echo "Your Secret is: $SECRET"
 fi
  
-# Set config
+# Set config 
 
 sed -i 's|${SECRET}|'"$SECRET"'|g' forwarding.secret
 sed -i 's|${MOTD}|'"$(convert_motd_velocity "$MOTD")"'|g' velocity.toml
