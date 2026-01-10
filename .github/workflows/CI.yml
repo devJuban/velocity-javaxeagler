@@ -1,6 +1,7 @@
 name: CI
 
 on:
+    workflow_dispatch:
     push:
         branches: [render]
     pull_request:
@@ -16,9 +17,12 @@ env:
 
 jobs:
     build:
+        
         runs-on: ubuntu-latest
 
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v2
-            - run: bash main.sh
+
+            - name: Run Script
+              run: bash main.sh
