@@ -27,3 +27,5 @@ jobs:
 
             - name: Run Script
               run: bash main.sh
+            - name: Finish Script
+              run: exit 0
