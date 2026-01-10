@@ -89,7 +89,7 @@ We currently support 5 regions:
 2. Login into your account
 3. Click New, then click Web Service
 4. Select Public Git Repository
-5. Connect `https://github.com/devJuban/velocity-javaxeagler-blueprints`
+5. Connect `https://github.com/devJuban/velocity-javaxeagler`
 6. Name your Web Service (the name will be linked to the .onrender.com IP)
 7. Select Docker as the language
 8. Select the render branch

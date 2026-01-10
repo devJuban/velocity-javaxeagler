@@ -1,0 +1,24 @@
+name: CI
+
+on:
+    push:
+        branches: [render]
+    pull_request:
+        branches: [render]
+
+env:
+    IMAGE: https://i.ibb.co/nqh56Hcw/white.png
+    MAXPLAYERS: 45
+    MOTD: Hello World!/nAnother Line
+    RENDER: https://velocity-javaxeagler-beta.onrender.com
+    SECRET: SUPER_SECRET_KEY
+    SERVER: 0.0.0.0:14457
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+            - run: bash main.sh
